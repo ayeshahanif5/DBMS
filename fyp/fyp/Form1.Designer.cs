@@ -40,8 +40,6 @@
             this.txtemail = new System.Windows.Forms.TextBox();
             this.combogender = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtRegistrationNo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -52,27 +50,31 @@
             // 
             this.txtfname.Location = new System.Drawing.Point(307, 55);
             this.txtfname.Name = "txtfname";
-            this.txtfname.Size = new System.Drawing.Size(100, 20);
+            this.txtfname.Size = new System.Drawing.Size(152, 20);
             this.txtfname.TabIndex = 0;
+            this.txtfname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfname_KeyPress);
             // 
             // txtlname
             // 
             this.txtlname.Location = new System.Drawing.Point(307, 91);
             this.txtlname.Name = "txtlname";
-            this.txtlname.Size = new System.Drawing.Size(100, 20);
+            this.txtlname.Size = new System.Drawing.Size(152, 20);
             this.txtlname.TabIndex = 1;
+            this.txtlname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtlname_KeyPress);
             // 
             // txtcontact
             // 
             this.txtcontact.Location = new System.Drawing.Point(307, 123);
             this.txtcontact.Name = "txtcontact";
-            this.txtcontact.Size = new System.Drawing.Size(100, 20);
+            this.txtcontact.Size = new System.Drawing.Size(152, 20);
             this.txtcontact.TabIndex = 2;
+            this.txtcontact.TextChanged += new System.EventHandler(this.txtcontact_TextChanged);
+            this.txtcontact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcontact_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(100, 55);
+            this.label1.Location = new System.Drawing.Point(108, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 3;
@@ -82,7 +84,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(99, 91);
+            this.label2.Location = new System.Drawing.Point(108, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 4;
@@ -91,7 +93,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(100, 123);
+            this.label3.Location = new System.Drawing.Point(108, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 5;
@@ -100,7 +102,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(100, 161);
+            this.label4.Location = new System.Drawing.Point(108, 164);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 6;
@@ -109,7 +111,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(105, 194);
+            this.label5.Location = new System.Drawing.Point(108, 194);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 13);
             this.label5.TabIndex = 7;
@@ -118,7 +120,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(105, 229);
+            this.label6.Location = new System.Drawing.Point(108, 228);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 13);
             this.label6.TabIndex = 8;
@@ -128,7 +130,7 @@
             // 
             this.txtemail.Location = new System.Drawing.Point(307, 161);
             this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(100, 20);
+            this.txtemail.Size = new System.Drawing.Size(152, 20);
             this.txtemail.TabIndex = 10;
             // 
             // combogender
@@ -139,55 +141,37 @@
             "Male"});
             this.combogender.Location = new System.Drawing.Point(307, 220);
             this.combogender.Name = "combogender";
-            this.combogender.Size = new System.Drawing.Size(100, 21);
+            this.combogender.Size = new System.Drawing.Size(152, 21);
             this.combogender.TabIndex = 13;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(103, 345);
+            this.button1.Location = new System.Drawing.Point(354, 308);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(105, 39);
             this.button1.TabIndex = 14;
             this.button1.Text = "add";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(236, 345);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "update";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(368, 344);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "delete";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(307, 194);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(152, 20);
             this.dateTimePicker1.TabIndex = 17;
             // 
             // txtRegistrationNo
             // 
-            this.txtRegistrationNo.Location = new System.Drawing.Point(307, 265);
+            this.txtRegistrationNo.Location = new System.Drawing.Point(307, 258);
             this.txtRegistrationNo.Name = "txtRegistrationNo";
-            this.txtRegistrationNo.Size = new System.Drawing.Size(100, 20);
+            this.txtRegistrationNo.Size = new System.Drawing.Size(152, 20);
             this.txtRegistrationNo.TabIndex = 18;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(108, 265);
+            this.label7.Location = new System.Drawing.Point(108, 258);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 13);
             this.label7.TabIndex = 19;
@@ -210,8 +194,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtRegistrationNo);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.combogender);
             this.Controls.Add(this.txtemail);
@@ -227,6 +209,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,8 +229,6 @@
         private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.ComboBox combogender;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox txtRegistrationNo;
         private System.Windows.Forms.Label label7;

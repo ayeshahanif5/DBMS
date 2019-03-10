@@ -38,7 +38,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 61);
+            this.label1.Location = new System.Drawing.Point(112, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 0;
@@ -47,7 +47,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(61, 116);
+            this.label2.Location = new System.Drawing.Point(112, 104);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 1;
@@ -56,10 +56,12 @@
             // 
             // txtsalary
             // 
-            this.txtsalary.Location = new System.Drawing.Point(294, 133);
+            this.txtsalary.Location = new System.Drawing.Point(256, 97);
             this.txtsalary.Name = "txtsalary";
-            this.txtsalary.Size = new System.Drawing.Size(100, 20);
+            this.txtsalary.Size = new System.Drawing.Size(141, 20);
             this.txtsalary.TabIndex = 2;
+            this.txtsalary.TextChanged += new System.EventHandler(this.txtsalary_TextChanged);
+            this.txtsalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsalary_KeyPress);
             // 
             // comboBox1
             // 
@@ -69,16 +71,16 @@
             "Associate Professor",
             "Assisstant Professor",
             "Lecturer"});
-            this.comboBox1.Location = new System.Drawing.Point(315, 61);
+            this.comboBox1.Location = new System.Drawing.Point(256, 58);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(141, 21);
             this.comboBox1.TabIndex = 3;
             // 
             // btnadd
             // 
-            this.btnadd.Location = new System.Drawing.Point(342, 200);
+            this.btnadd.Location = new System.Drawing.Point(307, 145);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(75, 23);
+            this.btnadd.Size = new System.Drawing.Size(90, 35);
             this.btnadd.TabIndex = 4;
             this.btnadd.Text = "add";
             this.btnadd.UseVisualStyleBackColor = true;
@@ -96,6 +98,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Advisor";
             this.Text = "Advisor";
+            this.Load += new System.EventHandler(this.Advisor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

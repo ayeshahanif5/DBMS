@@ -38,7 +38,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(97, 90);
+            this.label1.Location = new System.Drawing.Point(97, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 0;
@@ -47,7 +47,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(97, 148);
+            this.label2.Location = new System.Drawing.Point(97, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(27, 13);
             this.label2.TabIndex = 1;
@@ -55,23 +55,25 @@
             // 
             // txtdes
             // 
-            this.txtdes.Location = new System.Drawing.Point(345, 90);
+            this.txtdes.Location = new System.Drawing.Point(274, 73);
             this.txtdes.Name = "txtdes";
-            this.txtdes.Size = new System.Drawing.Size(100, 20);
+            this.txtdes.Size = new System.Drawing.Size(136, 20);
             this.txtdes.TabIndex = 2;
+            this.txtdes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdes_KeyPress);
             // 
             // txttitle
             // 
-            this.txttitle.Location = new System.Drawing.Point(330, 148);
+            this.txttitle.Location = new System.Drawing.Point(274, 116);
             this.txttitle.Name = "txttitle";
-            this.txttitle.Size = new System.Drawing.Size(100, 20);
+            this.txttitle.Size = new System.Drawing.Size(136, 20);
             this.txttitle.TabIndex = 3;
+            this.txttitle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttitle_KeyPress);
             // 
             // btnadd
             // 
-            this.btnadd.Location = new System.Drawing.Point(369, 195);
+            this.btnadd.Location = new System.Drawing.Point(318, 159);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(75, 23);
+            this.btnadd.Size = new System.Drawing.Size(92, 34);
             this.btnadd.TabIndex = 4;
             this.btnadd.Text = "add";
             this.btnadd.UseVisualStyleBackColor = true;

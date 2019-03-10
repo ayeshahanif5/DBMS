@@ -27,24 +27,24 @@ namespace fyp
         void filcombox()
         {
            
-            string q = "select Title from Project;";
-            SqlCommand cmd = new SqlCommand(q, con);
-            SqlDataReader myreader;
-            try
-            {
-                con.Open();
-                myreader = cmd.ExecuteReader();
-                while (myreader.Read())
-                {
-                    string name = myreader.GetString("s");
-                    comboBox1.Items.Add(s);
-                }
+            //string q = "select Title from Project;";
+            //SqlCommand cmd = new SqlCommand(q, con);
+            //SqlDataReader myreader;
+            //try
+            //{
+            //    con.Open();
+            //    myreader = cmd.ExecuteReader();
+            //    while (myreader.Read())
+            //    {
+            //        string name = myreader.GetString("s");
+            //        comboBox1.Items.Add(s);
+            //    }
 
 
-            }
+            //}
             
 
-            con.Close();
+            //con.Close();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

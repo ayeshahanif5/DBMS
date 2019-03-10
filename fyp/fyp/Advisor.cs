@@ -27,18 +27,54 @@ namespace fyp
         private void btnadd_Click(object sender, EventArgs e)
         {
             con.Open();
-            string q1 = "(select id from Lookup where Value = '" + comboBox1.Text + "')";
-            SqlCommand cm = new SqlCommand(q1, con);
-            int s = Convert.ToInt32(cm.ExecuteScalar());
+            try
+            {
+                string q1 = "(select id from Lookup where Value = '" + comboBox1.Text + "')";
+                SqlCommand cm = new SqlCommand(q1, con);
+                int s = Convert.ToInt32(cm.ExecuteScalar());
+                string q = "insert into Advisor(Id,Designation, Salary) values('" + s + "',(select id from Lookup where Value  = '" + comboBox1.Text + "'), '" + Convert.ToDecimal(txtsalary.Text) + "')";
+                SqlCommand cmd = new SqlCommand(q, con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("data insert sucessfuly");
+                comboBox1.Text = " ";
+                txtsalary.Text = " ";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("alreadyexist");
 
-            string q = "insert into Advisor(Id,Designation, Salary) values('"+s+"',(select id from Lookup where Value  = '"+comboBox1.Text+"'), '"+ Convert.ToDecimal(txtsalary.Text)+ "')";
-            SqlCommand cmd = new SqlCommand(q, con);
-            cmd.ExecuteNonQuery();
-           
-            MessageBox.Show("data insert sucessfuly");
-            con.Close();
+            }
+
+                con.Close();
 
             
+        }
+
+        private void Advisor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtsalary_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtsalary_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8)
+            {
+
+
+                e.Handled = false;
+
+            }
+            else
+            {
+                MessageBox.Show("Please Enter only Number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                e.Handled = true;
+
+            }
         }
     }
 }

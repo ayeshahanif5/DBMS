@@ -27,11 +27,41 @@ namespace fyp
         private void btnadd_Click(object sender, EventArgs e)
         {
             con.Open();
-            string q = "insert into Project(Description,Title) values( '"+txtdes+"','"+txttitle+"')";
-            SqlCommand cmd = new SqlCommand(q, con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("data insert sucessfuly");
+            try
+            {
+                string q = "insert into Project(Description,Title) values( '" + txtdes + "','" + txttitle + "')";
+                SqlCommand cmd = new SqlCommand(q, con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("data insert sucessfuly");
+                txtdes.Text = " ";
+                txttitle.Text = " ";
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("alreadyexist");
+            }
             con.Close();
+        }
+
+        private void txtdes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space))
+            {
+
+                e.Handled = true;
+                MessageBox.Show("Please Enter only character.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+        }
+
+        private void txttitle_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space))
+            {
+
+                e.Handled = true;
+                MessageBox.Show("Please Enter only character.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
         }
     }
 }
