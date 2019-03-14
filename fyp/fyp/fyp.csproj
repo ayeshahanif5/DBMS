@@ -58,6 +58,18 @@
     <Compile Include="assingrple.Designer.cs">
       <DependentUpon>assingrple.cs</DependentUpon>
     </Compile>
+    <Compile Include="creategroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="creategroup.Designer.cs">
+      <DependentUpon>creategroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="evaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="evaluation.Designer.cs">
+      <DependentUpon>evaluation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,11 +90,23 @@
     <Compile Include="registration.Designer.cs">
       <DependentUpon>registration.cs</DependentUpon>
     </Compile>
+    <Compile Include="start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="start.Designer.cs">
+      <DependentUpon>start.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Advisor.resx">
       <DependentUpon>Advisor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="assingrple.resx">
       <DependentUpon>assingrple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="creategroup.resx">
+      <DependentUpon>creategroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="evaluation.resx">
+      <DependentUpon>evaluation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -101,6 +125,9 @@
     </Compile>
     <EmbeddedResource Include="registration.resx">
       <DependentUpon>registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="start.resx">
+      <DependentUpon>start.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -38,6 +38,8 @@ namespace fyp
                 MessageBox.Show("data insert sucessfuly");
                 comboBox1.Text = " ";
                 txtsalary.Text = " ";
+
+               
             }
             catch (Exception ex)
             {
@@ -75,6 +77,32 @@ namespace fyp
                 e.Handled = true;
 
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            project p = new project();
+            this.Hide();
+            p.Show();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            project p = new project();
+            this.Hide();
+            p.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            con.Close();
         }
     }
 }

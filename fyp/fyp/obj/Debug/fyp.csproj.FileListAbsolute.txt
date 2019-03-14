@@ -16,10 +16,13 @@ C:\Users\Ayesha Hanif\Desktop\DBMS\fyp\fyp\obj\Debug\fyp.pdb
 C:\Users\Ayesha Hanif\Desktop\DBMS\fyp\fyp\obj\Debug\fyp.csprojResolveAssemblyReference.cache
 C:\Users\Ayesha Hanif\Desktop\DBMS\fyp\fyp\obj\Debug\fyp.Advisor.resources
 C:\Users\Ayesha Hanif\Desktop\DBMS\fyp\fyp\obj\Debug\fyp.assingrple.resources
-C:\Users\Ayesha Hanif\Desktop\DBMS\fyp\fyp\obj\Debug\fyp.Form1.resources
 C:\Users\Ayesha Hanif\Desktop\DBMS\fyp\fyp\obj\Debug\fyp.project.resources
 C:\Users\Ayesha Hanif\Desktop\DBMS\fyp\fyp\obj\Debug\fyp.Properties.Resources.resources
 C:\Users\Ayesha Hanif\Desktop\DBMS\fyp\fyp\obj\Debug\fyp.registration.resources
 C:\Users\Ayesha Hanif\Desktop\DBMS\fyp\fyp\obj\Debug\fyp.csproj.GenerateResource.Cache
 C:\Users\Ayesha Hanif\Desktop\DBMS\fyp\fyp\bin\Debug\fyp.exe
 C:\Users\Ayesha Hanif\Desktop\DBMS\fyp\fyp\bin\Debug\fyp.pdb
+C:\Users\Ayesha Hanif\Desktop\DBMS\fyp\fyp\obj\Debug\fyp.creategroup.resources
+C:\Users\Ayesha Hanif\Desktop\DBMS\fyp\fyp\obj\Debug\fyp.start.resources
+C:\Users\Ayesha Hanif\Desktop\DBMS\fyp\fyp\obj\Debug\fyp.Form1.resources
+C:\Users\Ayesha Hanif\Desktop\DBMS\fyp\fyp\obj\Debug\fyp.evaluation.resources

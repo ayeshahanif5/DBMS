@@ -29,12 +29,16 @@ namespace fyp
             con.Open();
             try
             {
-                string q = "insert into Project(Description,Title) values( '" + txtdes + "','" + txttitle + "')";
+                string q = "insert into Project(Description,Title) values( '" + txtdes.Text + "','" + txttitle.Text + "')";
                 SqlCommand cmd = new SqlCommand(q, con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("data insert sucessfuly");
                 txtdes.Text = " ";
                 txttitle.Text = " ";
+
+                assingrple a = new assingrple();
+                this.Hide();
+                a.Show();
             }
 
             catch (Exception ex)
@@ -62,6 +66,18 @@ namespace fyp
                 e.Handled = true;
                 MessageBox.Show("Please Enter only character.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            assingrple s = new assingrple();
+            this.Hide();
+            s.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

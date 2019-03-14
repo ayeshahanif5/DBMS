@@ -30,7 +30,7 @@ namespace fyp
             con.Open();
             try
             {
-                string q = "insert into Person(FirstName, LastName, Contact, Email, DateOfBirth, Gender) values('" + txtfname.Text + "', '" + txtlname.Text + "', '" + txtcontact.Text + "', '" + txtemail.Text + "', '" + Convert.ToDateTime(dateTimePicker1.Text) + "', (select id from Lookup where Value = '" + combogender.Text + "'))";
+                string q = "insert into Person(FirstName, LastName, Contact, Email, DateOfBirth, Gender) values('" + txtfname.Text + "', '" + txtlname.Text + "', '" + txtcontact.Text + "', '" + txtemail.Text + "', '" + Convert.ToDateTime(dateTimePicker1.Value.ToString("MM/dd/yyyy")) + "', (select id from Lookup where Value = '" + combogender.Text + "'))";
                 SqlCommand cmd = new SqlCommand(q, con);
                 cmd.ExecuteNonQuery();
                 string q1 = "select IDENT_CURRENT('Person')";
@@ -116,6 +116,13 @@ namespace fyp
                 e.Handled = true;
                 MessageBox.Show("Please Enter only character.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
+        }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            start s = new start();
+            this.Hide();
+            s.Show();
         }
     }
 }
