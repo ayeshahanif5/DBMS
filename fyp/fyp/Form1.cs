@@ -124,5 +124,10 @@ namespace fyp
             this.Hide();
             s.Show();
         }
+
+        private void txtfname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

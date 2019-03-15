@@ -53,6 +53,7 @@
             this.txtfname.Name = "txtfname";
             this.txtfname.Size = new System.Drawing.Size(152, 20);
             this.txtfname.TabIndex = 0;
+            this.txtfname.TextChanged += new System.EventHandler(this.txtfname_TextChanged);
             this.txtfname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfname_KeyPress);
             // 
             // txtlname
@@ -147,7 +148,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(354, 308);
+            this.button1.Location = new System.Drawing.Point(354, 300);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 39);
             this.button1.TabIndex = 14;
@@ -189,7 +190,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(94, 371);
+            this.linkLabel1.Location = new System.Drawing.Point(108, 374);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(32, 13);
             this.linkLabel1.TabIndex = 21;
@@ -197,7 +198,7 @@
             this.linkLabel1.Text = "Back";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_1);
             // 
-            // person
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -219,7 +220,7 @@
             this.Controls.Add(this.txtcontact);
             this.Controls.Add(this.txtlname);
             this.Controls.Add(this.txtfname);
-            this.Name = "person";
+            this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);

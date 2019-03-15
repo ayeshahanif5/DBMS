@@ -25,7 +25,7 @@ namespace fyp
             com2();
         }
 
-       
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
@@ -34,7 +34,7 @@ namespace fyp
         private void button1_Click(object sender, EventArgs e)
         {
             con.Open();
-           
+
 
             string q = "insert into ProjectAdvisor(AdvisorId,ProjectId,AdvisorRole,AssignmentDate) values( (select Id from Lookup WHERE Value='" + comboBox2.Text + "'),(select Id from Project where Title='" + comboBox1.Text + "'),(select Id from Lookup WHERE Value='" + comboBox2.Text + "'),'" + Convert.ToDateTime(dateTimePicker1.Value) + "')";
             SqlCommand c = new SqlCommand(q, con);
@@ -51,10 +51,10 @@ namespace fyp
         void com1()
             {
             string cq = "SELECT Title FROM Project";
-          
+
             using (SqlDataAdapter dr = new SqlDataAdapter(cq, con))
             {
-                DataTable db= new DataTable();
+                DataTable db = new DataTable();
                 dr.Fill(db);
                 DataRow s = db.NewRow();
                 s[0] = "choose";
@@ -81,6 +81,18 @@ namespace fyp
                 comboBox2.DisplayMember = "Value";
                 comboBox2.ValueMember = "Value";
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            project p = new project();
+            this.Hide();
+            p.Show();
         }
     }
 

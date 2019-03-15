@@ -52,9 +52,22 @@ namespace fyp
             
         }
 
+        void fill()
+        {
+            if (con.State == ConnectionState.Closed)
+                con.Open();
+
+            SqlDataAdapter adr = new SqlDataAdapter("select Id,Designation,Salary from Advisor ", con);
+
+            DataTable tb = new DataTable();
+            adr.Fill(tb);
+            con.Close();
+            dataGridView1.DataSource = tb;
+        }
+
         private void Advisor_Load(object sender, EventArgs e)
         {
-
+            fill();
         }
 
         private void txtsalary_TextChanged(object sender, EventArgs e)
@@ -86,7 +99,7 @@ namespace fyp
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            project p = new project();
+            start p = new start();
             this.Hide();
             p.Show();
         }
@@ -101,7 +114,44 @@ namespace fyp
         private void button1_Click(object sender, EventArgs e)
         {
             con.Open();
+            string q1 = " update ProjectAdvisor set AdvisorId = '" + Convert.ToInt32(label3.Text) + "' where ProjectId= '" + Convert.ToInt32(label3.Text) + "'";
+            SqlCommand c = new SqlCommand(q1, con);
+            c.ExecuteNonQuery();
+            string q = "update Advisor set Salary='" + txtsalary.Text + "' where Advisor.Id= '" + Convert.ToInt32(label3.Text) + "'";
+            SqlCommand c1 = new SqlCommand(q, con);
+            c1.ExecuteNonQuery();
 
+            MessageBox.Show("data edit sucessfuly");
+            comboBox1.Text = " ";
+            txtsalary.Text = " ";
+            dataGridView1.DataSource = null;
+            fill();
+            con.Close();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = e.RowIndex;
+            DataGridViewRow tr = dataGridView1.Rows[i];
+            label3.Text = tr.Cells[0].Value.ToString();
+            comboBox1.Text = tr.Cells[1].Value.ToString();
+            txtsalary.Text = tr.Cells[2].Value.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            string q = "delete from ProjectAdvisor where AdvisorId = '" + Convert.ToInt32(label3.Text) + "' ";
+            SqlCommand c = new SqlCommand(q, con);
+            c.ExecuteNonQuery();
+            string q1 = "delete from Advisor where Id= '" + Convert.ToInt32(label3.Text) + "' ";
+            SqlCommand c2 = new SqlCommand(q1, con);
+            c2.ExecuteNonQuery();
+            MessageBox.Show("data deleted sucessfuly");
+            comboBox1.Text = " ";
+            txtsalary.Text = " ";
+            dataGridView1.DataSource = null;
+            fill();
             con.Close();
         }
     }

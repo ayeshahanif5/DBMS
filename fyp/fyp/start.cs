@@ -37,5 +37,12 @@ namespace fyp
             this.Hide();
             x.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            evaluation x = new evaluation();
+            this.Hide();
+            x.Show();
+        }
     }
 }

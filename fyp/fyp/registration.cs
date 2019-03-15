@@ -39,9 +39,12 @@ namespace fyp
 
         private void btncreate_Click(object sender, EventArgs e)
         {
-            Advisor a = new Advisor();
+            //Advisor a = new Advisor();
+            //this.Hide();
+            //a.Show();
+            creategroup c = new creategroup();
             this.Hide();
-            a.Show();
+            c.Show();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
