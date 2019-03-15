@@ -23,6 +23,7 @@ namespace fyp
         {
             com1();
             com2();
+            fill();
         }
 
 
@@ -57,11 +58,12 @@ namespace fyp
                 DataTable db = new DataTable();
                 dr.Fill(db);
                 DataRow s = db.NewRow();
-                s[0] = "choose";
-                db.Rows.InsertAt(s, 0);
+                //s[0] = "choose";
+                //db.Rows.InsertAt(s, 0);
                 comboBox1.DataSource = db;
                 comboBox1.DisplayMember = "Title";
                 comboBox1.ValueMember = "Title";
+                comboBox1.Text = " ";
             }
 
         }
@@ -75,11 +77,13 @@ namespace fyp
                 DataTable a = new DataTable();
                 dr.Fill(a);
                 DataRow s = a.NewRow();
-                s[0] = "choose";
-                a.Rows.InsertAt(s, 0);
+                //s[0] = "Please choose";
+                //a.Rows.InsertAt(s, 0);
+
                 comboBox2.DataSource = a;
                 comboBox2.DisplayMember = "Value";
                 comboBox2.ValueMember = "Value";
+                comboBox2.Text = " ";
             }
         }
 
@@ -88,11 +92,39 @@ namespace fyp
 
         }
 
+        void fill()
+        {
+            if (con.State == ConnectionState.Closed)
+                con.Open();
+
+            SqlDataAdapter adr = new SqlDataAdapter("select AdvisorId,ProjectId,AdvisorRole,AssignmentDate from ProjectAdvisor ", con);
+
+            DataTable tb = new DataTable();
+            adr.Fill(tb);
+            con.Close();
+            dataGridView1.DataSource = tb;
+        }
+
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             project p = new project();
             this.Hide();
             p.Show();
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = e.RowIndex;
+            DataGridViewRow tr = dataGridView1.Rows[i];
+           // label3.Text = tr.Cells[0].Value.ToString();
+            comboBox1.Text = tr.Cells[0].Value.ToString();
+            comboBox2.Text = tr.Cells[1].Value.ToString();
+            dateTimePicker1.Value =Convert.ToDateTime( tr.Cells[3].Value.ToString());
         }
     }
 

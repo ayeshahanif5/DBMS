@@ -134,6 +134,8 @@
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(152, 20);
             this.txtemail.TabIndex = 10;
+            this.txtemail.Leave += new System.EventHandler(this.txtemail_Leave);
+            this.txtemail.Validating += new System.ComponentModel.CancelEventHandler(this.txtemail_Validating);
             // 
             // combogender
             // 

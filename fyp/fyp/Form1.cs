@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace fyp
 {
@@ -128,6 +129,36 @@ namespace fyp
         private void txtfname_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtemail_Leave(object sender, EventArgs e)
+        {
+          //  string s = "^([0-9a-zA-Z]([-\\-\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
+           
+
+        }
+
+        private void txtemail_Validating(object sender, CancelEventArgs e)
+        {
+            System.Text.RegularExpressions.Regex rEMail = new System.Text.RegularExpressions.Regex(@"^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$");
+
+            if (txtemail.Text.Length > 0)
+
+            {
+
+                if (!rEMail.IsMatch(txtemail.Text))
+
+                {
+
+                    MessageBox.Show("E-Mail expected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    txtemail.SelectAll();
+
+                    e.Cancel = true;
+
+                }
+
+            }
         }
     }
 }

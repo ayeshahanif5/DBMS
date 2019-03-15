@@ -40,26 +40,26 @@ namespace fyp
         private void button1_Click(object sender, EventArgs e)
         {
             con.Open();
-            string q = "insert into Evaluation(Name,TotalMarks ,TotalWeightage) values('" +textBox1.Text+"', '"+Convert.ToInt32(textBox2.Text)+ "','" + Convert.ToInt32(textBox3.Text) + "' )";
+            string q = "insert into Evaluation(Name,TotalMarks ,TotalWeightage) values('" +txtname.Text+"', '"+Convert.ToInt32(txtmarks.Text)+ "','" + Convert.ToInt32(txttotalweightage.Text) + "' )";
             SqlCommand cmd = new SqlCommand(q, con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("data insert sucessfuly");
-            textBox1.Text = " ";
-            textBox2.Text = " ";
-            textBox3.Text = " ";
+            txtname.Text = " ";
+            txtmarks.Text = " ";
+            txttotalweightage.Text = " ";
             con.Close();
         }
 
         private void btnedit_Click(object sender, EventArgs e)
         {
             con.Open();
-            string q = "update Evaluation set Name='" + textBox1.Text + "', TotalMarks='" + textBox2.Text + "',TotalWeightage='" + textBox3.Text + "' where Evaluation.Id= '" + Convert.ToInt32(label5.Text) + "'";
+            string q = "update Evaluation set Name='" + txtname.Text + "', TotalMarks='" + txtmarks.Text + "',TotalWeightage='" + txttotalweightage.Text + "' where Evaluation.Id= '" + Convert.ToInt32(label5.Text) + "'";
             SqlCommand c1 = new SqlCommand(q, con);
             c1.ExecuteNonQuery();
             MessageBox.Show("data edit sucessfuly");
-            textBox1.Text = " ";
-            textBox2.Text = " ";
-            textBox3.Text = " ";
+            txtname.Text = " ";
+            txtmarks.Text = " ";
+            txttotalweightage.Text = " ";
             dataGridView1.DataSource = null;
             fill();
             con.Close();
@@ -77,9 +77,9 @@ namespace fyp
             SqlCommand c2 = new SqlCommand(q1, con);
             c2.ExecuteNonQuery();
             MessageBox.Show("data deleted sucessfuly");
-            textBox1.Text = " ";
-            textBox2.Text = " ";
-            textBox3.Text = " ";
+            txtname.Text = " ";
+            txtmarks.Text = " ";
+            txttotalweightage.Text = " ";
             dataGridView1.DataSource = null;
             fill();
             con.Close();
@@ -90,9 +90,9 @@ namespace fyp
             int i = e.RowIndex;
             DataGridViewRow tr = dataGridView1.Rows[i];
             label5.Text = tr.Cells[0].Value.ToString();
-            textBox1.Text = tr.Cells[1].Value.ToString();
-            textBox2.Text = tr.Cells[2].Value.ToString();
-            textBox3.Text = tr.Cells[2].Value.ToString();
+            txtname.Text = tr.Cells[1].Value.ToString();
+            txtmarks.Text = tr.Cells[2].Value.ToString();
+            txttotalweightage.Text = tr.Cells[2].Value.ToString();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -145,6 +145,16 @@ namespace fyp
                 e.Handled = true;
 
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtmarks_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

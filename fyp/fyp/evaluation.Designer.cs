@@ -32,9 +32,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
+            this.txtmarks = new System.Windows.Forms.TextBox();
+            this.txttotalweightage = new System.Windows.Forms.TextBox();
             this.btnedit = new System.Windows.Forms.Button();
             this.btndelete = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -82,29 +82,31 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txtname
             // 
-            this.textBox1.Location = new System.Drawing.Point(331, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.txtname.Location = new System.Drawing.Point(331, 52);
+            this.txtname.Name = "txtname";
+            this.txtname.Size = new System.Drawing.Size(100, 20);
+            this.txtname.TabIndex = 4;
+            this.txtname.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
-            // textBox2
+            // txtmarks
             // 
-            this.textBox2.Location = new System.Drawing.Point(331, 94);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.txtmarks.Location = new System.Drawing.Point(331, 94);
+            this.txtmarks.Name = "txtmarks";
+            this.txtmarks.Size = new System.Drawing.Size(100, 20);
+            this.txtmarks.TabIndex = 5;
+            this.txtmarks.TextChanged += new System.EventHandler(this.txtmarks_TextChanged);
+            this.txtmarks.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
-            // textBox3
+            // txttotalweightage
             // 
-            this.textBox3.Location = new System.Drawing.Point(331, 136);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            this.txttotalweightage.Location = new System.Drawing.Point(331, 136);
+            this.txttotalweightage.Name = "txttotalweightage";
+            this.txttotalweightage.Size = new System.Drawing.Size(100, 20);
+            this.txttotalweightage.TabIndex = 6;
+            this.txttotalweightage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // btnedit
             // 
@@ -187,9 +189,9 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.btnedit);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txttotalweightage);
+            this.Controls.Add(this.txtmarks);
+            this.Controls.Add(this.txtname);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -209,9 +211,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtname;
+        private System.Windows.Forms.TextBox txtmarks;
+        private System.Windows.Forms.TextBox txttotalweightage;
         private System.Windows.Forms.Button btnedit;
         private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.DataGridView dataGridView1;
