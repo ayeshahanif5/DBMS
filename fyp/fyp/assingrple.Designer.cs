@@ -39,13 +39,18 @@
             this.btnedit = new System.Windows.Forms.Button();
             this.btndelete = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(326, 48);
+            this.comboBox1.Location = new System.Drawing.Point(214, 27);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(139, 21);
             this.comboBox1.TabIndex = 0;
@@ -54,7 +59,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(326, 93);
+            this.comboBox2.Location = new System.Drawing.Point(214, 77);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(139, 21);
             this.comboBox2.TabIndex = 1;
@@ -63,7 +68,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(104, 51);
+            this.label1.Location = new System.Drawing.Point(77, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 2;
@@ -72,7 +77,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(104, 93);
+            this.label2.Location = new System.Drawing.Point(77, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 3;
@@ -81,7 +86,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(104, 135);
+            this.label3.Location = new System.Drawing.Point(77, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 13);
             this.label3.TabIndex = 4;
@@ -89,16 +94,17 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(326, 135);
+            this.dateTimePicker1.Location = new System.Drawing.Point(214, 123);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(139, 20);
             this.dateTimePicker1.TabIndex = 5;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(374, 204);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(503, 251);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 23);
+            this.button1.Size = new System.Drawing.Size(81, 36);
             this.button1.TabIndex = 6;
             this.button1.Text = "ADD";
             this.button1.UseVisualStyleBackColor = true;
@@ -106,10 +112,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(107, 246);
+            this.dataGridView1.Location = new System.Drawing.Point(107, 302);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(358, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(477, 174);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
@@ -117,26 +126,29 @@
             // 
             // btnedit
             // 
-            this.btnedit.Location = new System.Drawing.Point(234, 204);
+            this.btnedit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnedit.Location = new System.Drawing.Point(401, 251);
             this.btnedit.Name = "btnedit";
-            this.btnedit.Size = new System.Drawing.Size(97, 23);
+            this.btnedit.Size = new System.Drawing.Size(83, 36);
             this.btnedit.TabIndex = 8;
             this.btnedit.Text = "EDIT";
             this.btnedit.UseVisualStyleBackColor = true;
             // 
             // btndelete
             // 
-            this.btndelete.Location = new System.Drawing.Point(107, 204);
+            this.btndelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btndelete.Location = new System.Drawing.Point(298, 251);
             this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(90, 23);
+            this.btndelete.Size = new System.Drawing.Size(82, 36);
             this.btndelete.TabIndex = 9;
             this.btndelete.Text = "DELETE";
             this.btndelete.UseVisualStyleBackColor = true;
             // 
             // linkLabel1
             // 
+            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(104, 432);
+            this.linkLabel1.Location = new System.Drawing.Point(104, 489);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(32, 13);
             this.linkLabel1.TabIndex = 10;
@@ -144,26 +156,62 @@
             this.linkLabel1.Text = "Back";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Location = new System.Drawing.Point(107, 67);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(477, 169);
+            this.panel1.TabIndex = 11;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Location = new System.Drawing.Point(107, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(477, 48);
+            this.panel2.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(24, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "AssignRole";
+            // 
             // assingrple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(563, 479);
+            this.ClientSize = new System.Drawing.Size(688, 521);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.btnedit);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
             this.Name = "assingrple";
             this.Text = "assingrple";
             this.Load += new System.EventHandler(this.assingrple_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,5 +230,8 @@
         private System.Windows.Forms.Button btnedit;
         private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label4;
     }
 }

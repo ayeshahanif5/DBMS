@@ -39,13 +39,18 @@
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(68, 61);
+            this.label1.Location = new System.Drawing.Point(74, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 0;
@@ -54,7 +59,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(68, 104);
+            this.label2.Location = new System.Drawing.Point(74, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 1;
@@ -63,7 +68,7 @@
             // 
             // txtsalary
             // 
-            this.txtsalary.Location = new System.Drawing.Point(276, 97);
+            this.txtsalary.Location = new System.Drawing.Point(207, 115);
             this.txtsalary.Name = "txtsalary";
             this.txtsalary.Size = new System.Drawing.Size(141, 20);
             this.txtsalary.TabIndex = 2;
@@ -79,7 +84,7 @@
             "Assisstant Professor",
             "Lecturer",
             "Industry Professional"});
-            this.comboBox1.Location = new System.Drawing.Point(276, 53);
+            this.comboBox1.Location = new System.Drawing.Point(207, 65);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(141, 21);
             this.comboBox1.TabIndex = 3;
@@ -87,7 +92,8 @@
             // 
             // btnadd
             // 
-            this.btnadd.Location = new System.Drawing.Point(327, 156);
+            this.btnadd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnadd.Location = new System.Drawing.Point(486, 248);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(90, 35);
             this.btnadd.TabIndex = 4;
@@ -97,8 +103,9 @@
             // 
             // linkLabel1
             // 
+            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(68, 401);
+            this.linkLabel1.Location = new System.Drawing.Point(68, 476);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(32, 13);
             this.linkLabel1.TabIndex = 5;
@@ -108,8 +115,9 @@
             // 
             // linkLabel2
             // 
+            this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(381, 401);
+            this.linkLabel2.Location = new System.Drawing.Point(547, 476);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(29, 13);
             this.linkLabel2.TabIndex = 6;
@@ -119,9 +127,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(201, 156);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(374, 248);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 35);
+            this.button1.Size = new System.Drawing.Size(94, 35);
             this.button1.TabIndex = 7;
             this.button1.Text = "Edit";
             this.button1.UseVisualStyleBackColor = true;
@@ -129,7 +138,8 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(71, 156);
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(260, 248);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 35);
             this.button2.TabIndex = 8;
@@ -139,43 +149,82 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(71, 216);
+            this.dataGridView1.Location = new System.Drawing.Point(71, 299);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(346, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(505, 164);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(381, 13);
+            this.label3.Location = new System.Drawing.Point(313, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "label3";
             this.label3.Visible = false;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.txtsalary);
+            this.panel1.Location = new System.Drawing.Point(71, 72);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(505, 160);
+            this.panel1.TabIndex = 11;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Location = new System.Drawing.Point(71, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(505, 53);
+            this.panel2.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(22, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "ADVISOR";
+            // 
             // Advisor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 438);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(627, 513);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnadd);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.txtsalary);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "Advisor";
             this.Text = "Advisor";
             this.Load += new System.EventHandler(this.Advisor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,5 +243,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label4;
     }
 }
