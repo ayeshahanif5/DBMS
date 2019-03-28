@@ -36,11 +36,17 @@ namespace fyp
         {
             con.Open();
 
-
-            string q = "insert into ProjectAdvisor(AdvisorId,ProjectId,AdvisorRole,AssignmentDate) values( (select Id from Lookup WHERE Value='" + comboBox2.Text + "'),(select Id from Project where Title='" + comboBox1.Text + "'),(select Id from Lookup WHERE Value='" + comboBox2.Text + "'),'" + Convert.ToDateTime(dateTimePicker1.Value) + "')";
-            SqlCommand c = new SqlCommand(q, con);
-            c.ExecuteNonQuery();
-            MessageBox.Show("added");
+            try
+            {
+                string q = "insert into ProjectAdvisor(AdvisorId,ProjectId,AdvisorRole,AssignmentDate) values( (select Id from Lookup WHERE Value='" + comboBox2.Text + "'),(select Id from Project where Title='" + comboBox1.Text + "'),(select Id from Lookup WHERE Value='" + comboBox2.Text + "'),'" + Convert.ToDateTime(dateTimePicker1.Value) + "')";
+                SqlCommand c = new SqlCommand(q, con);
+                c.ExecuteNonQuery();
+                MessageBox.Show("added");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("already exist");
+            }
             con.Close();
         }
 

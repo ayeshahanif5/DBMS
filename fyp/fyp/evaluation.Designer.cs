@@ -34,7 +34,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtname = new System.Windows.Forms.TextBox();
             this.txtmarks = new System.Windows.Forms.TextBox();
-            this.txttotalweightage = new System.Windows.Forms.TextBox();
+            this.txtweightage = new System.Windows.Forms.TextBox();
             this.btnedit = new System.Windows.Forms.Button();
             this.btndelete = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -106,13 +106,13 @@
             this.txtmarks.TextChanged += new System.EventHandler(this.txtmarks_TextChanged);
             this.txtmarks.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
-            // txttotalweightage
+            // txtweightage
             // 
-            this.txttotalweightage.Location = new System.Drawing.Point(268, 126);
-            this.txttotalweightage.Name = "txttotalweightage";
-            this.txttotalweightage.Size = new System.Drawing.Size(100, 20);
-            this.txttotalweightage.TabIndex = 6;
-            this.txttotalweightage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            this.txtweightage.Location = new System.Drawing.Point(268, 126);
+            this.txtweightage.Name = "txtweightage";
+            this.txtweightage.Size = new System.Drawing.Size(100, 20);
+            this.txtweightage.TabIndex = 6;
+            this.txtweightage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // btnedit
             // 
@@ -177,6 +177,7 @@
             this.linkLabel1.TabIndex = 12;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Next";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // linkLabel2
             // 
@@ -202,7 +203,7 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtmarks);
-            this.panel1.Controls.Add(this.txttotalweightage);
+            this.panel1.Controls.Add(this.txtweightage);
             this.panel1.Location = new System.Drawing.Point(99, 78);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(531, 170);
@@ -265,7 +266,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtname;
         private System.Windows.Forms.TextBox txtmarks;
-        private System.Windows.Forms.TextBox txttotalweightage;
+        private System.Windows.Forms.TextBox txtweightage;
         private System.Windows.Forms.Button btnedit;
         private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.DataGridView dataGridView1;

@@ -40,26 +40,26 @@ namespace fyp
         private void button1_Click(object sender, EventArgs e)
         {
             con.Open();
-            string q = "insert into Evaluation(Name,TotalMarks ,TotalWeightage) values('" +txtname.Text+"', '"+Convert.ToInt32(txtmarks.Text)+ "','" + Convert.ToInt32(txttotalweightage.Text) + "' )";
+            string q = "insert into Evaluation(Name,TotalMarks ,TotalWeightage) values('" +txtname.Text+"', '"+Convert.ToInt32(txtmarks.Text)+ "','" + Convert.ToInt32(txtweightage.Text) + "' )";
             SqlCommand cmd = new SqlCommand(q, con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("data insert sucessfuly");
             txtname.Text = " ";
             txtmarks.Text = " ";
-            txttotalweightage.Text = " ";
+            txtweightage.Text = " ";
             con.Close();
         }
 
         private void btnedit_Click(object sender, EventArgs e)
         {
             con.Open();
-            string q = "update Evaluation set Name='" + txtname.Text + "', TotalMarks='" + txtmarks.Text + "',TotalWeightage='" + txttotalweightage.Text + "' where Evaluation.Id= '" + Convert.ToInt32(label5.Text) + "'";
+            string q = "update Evaluation set Name='" + txtname.Text + "', TotalMarks='" + txtmarks.Text + "',TotalWeightage='" + txtweightage.Text + "' where Evaluation.Id= '" + Convert.ToInt32(label5.Text) + "'";
             SqlCommand c1 = new SqlCommand(q, con);
             c1.ExecuteNonQuery();
             MessageBox.Show("data edit sucessfuly");
             txtname.Text = " ";
             txtmarks.Text = " ";
-            txttotalweightage.Text = " ";
+            txtweightage.Text = " ";
             dataGridView1.DataSource = null;
             fill();
             con.Close();
@@ -79,7 +79,7 @@ namespace fyp
             MessageBox.Show("data deleted sucessfuly");
             txtname.Text = " ";
             txtmarks.Text = " ";
-            txttotalweightage.Text = " ";
+            txtweightage.Text = " ";
             dataGridView1.DataSource = null;
             fill();
             con.Close();
@@ -92,7 +92,7 @@ namespace fyp
             label5.Text = tr.Cells[0].Value.ToString();
             txtname.Text = tr.Cells[1].Value.ToString();
             txtmarks.Text = tr.Cells[2].Value.ToString();
-            txttotalweightage.Text = tr.Cells[2].Value.ToString();
+            txtweightage.Text = tr.Cells[3].Value.ToString();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -155,6 +155,13 @@ namespace fyp
         private void txtmarks_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            GroupEvaluation g = new GroupEvaluation();
+            g.Show();
+            this.Hide();
         }
     }
 }

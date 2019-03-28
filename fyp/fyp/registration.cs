@@ -42,9 +42,7 @@ namespace fyp
             //Advisor a = new Advisor();
             //this.Hide();
             //a.Show();
-            creategroup c = new creategroup();
-            this.Hide();
-            c.Show();
+           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -98,16 +96,14 @@ namespace fyp
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            creategroup c = new creategroup();
+          Group c = new Group();
             this.Hide();
             c.Show();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            creategroup g = new creategroup();
-            this.Hide();
-            g.Show();
+           
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

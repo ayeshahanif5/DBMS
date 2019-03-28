@@ -58,12 +58,6 @@
     <Compile Include="assingrple.Designer.cs">
       <DependentUpon>assingrple.cs</DependentUpon>
     </Compile>
-    <Compile Include="creategroup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="creategroup.Designer.cs">
-      <DependentUpon>creategroup.cs</DependentUpon>
-    </Compile>
     <Compile Include="evaluation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +69,24 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Group.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Group.Designer.cs">
+      <DependentUpon>Group.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupEvaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupEvaluation.Designer.cs">
+      <DependentUpon>GroupEvaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupProject.Designer.cs">
+      <DependentUpon>GroupProject.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="project.cs">
@@ -102,14 +114,20 @@
     <EmbeddedResource Include="assingrple.resx">
       <DependentUpon>assingrple.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="creategroup.resx">
-      <DependentUpon>creategroup.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="evaluation.resx">
       <DependentUpon>evaluation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Group.resx">
+      <DependentUpon>Group.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupEvaluation.resx">
+      <DependentUpon>GroupEvaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupProject.resx">
+      <DependentUpon>GroupProject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="project.resx">
       <DependentUpon>project.cs</DependentUpon>
