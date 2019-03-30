@@ -29,14 +29,14 @@ namespace fyp
             con.Open();
             try
             {
-                string q1 = "(select id from Lookup where Value = '" + comboBox1.Text + "')";
+                string q1 = "(select id from Lookup where Value = '" + comboDesignation.Text + "')";
                 SqlCommand cm = new SqlCommand(q1, con);
                 int s = Convert.ToInt32(cm.ExecuteScalar());
-                string q = "insert into Advisor(Id,Designation, Salary) values('" + s + "',(select id from Lookup where Value  = '" + comboBox1.Text + "'), '" + Convert.ToDecimal(txtsalary.Text) + "')";
+                string q = "insert into Advisor(Id,Designation, Salary) values('" + s + "',(select id from Lookup where Value  = '" + comboDesignation.Text + "'), '" + Convert.ToDecimal(txtsalary.Text) + "')";
                 SqlCommand cmd = new SqlCommand(q, con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("data insert sucessfuly");
-                comboBox1.Text = " ";
+                comboDesignation.Text = " ";
                 txtsalary.Text = " ";
 
                
@@ -122,7 +122,7 @@ namespace fyp
             c1.ExecuteNonQuery();
 
             MessageBox.Show("data edit sucessfuly");
-            comboBox1.Text = " ";
+            comboDesignation.Text = " ";
             txtsalary.Text = " ";
             dataGridView1.DataSource = null;
             fill();
@@ -134,7 +134,7 @@ namespace fyp
             int i = e.RowIndex;
             DataGridViewRow tr = dataGridView1.Rows[i];
             label3.Text = tr.Cells[0].Value.ToString();
-            comboBox1.Text = tr.Cells[1].Value.ToString();
+            comboDesignation.Text = tr.Cells[1].Value.ToString();
             txtsalary.Text = tr.Cells[2].Value.ToString();
         }
 
@@ -148,7 +148,7 @@ namespace fyp
             SqlCommand c2 = new SqlCommand(q1, con);
             c2.ExecuteNonQuery();
             MessageBox.Show("data deleted sucessfuly");
-            comboBox1.Text = " ";
+            comboDesignation.Text = " ";
             txtsalary.Text = " ";
             dataGridView1.DataSource = null;
             fill();

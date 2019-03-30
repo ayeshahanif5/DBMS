@@ -132,6 +132,16 @@ namespace fyp
             comboBox2.Text = tr.Cells[1].Value.ToString();
             dateTimePicker1.Value =Convert.ToDateTime( tr.Cells[3].Value.ToString());
         }
+
+        private void btnedit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

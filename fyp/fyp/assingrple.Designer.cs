@@ -36,8 +36,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnedit = new System.Windows.Forms.Button();
-            this.btndelete = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -124,26 +122,6 @@
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
-            // btnedit
-            // 
-            this.btnedit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnedit.Location = new System.Drawing.Point(401, 251);
-            this.btnedit.Name = "btnedit";
-            this.btnedit.Size = new System.Drawing.Size(83, 36);
-            this.btnedit.TabIndex = 8;
-            this.btnedit.Text = "EDIT";
-            this.btnedit.UseVisualStyleBackColor = true;
-            // 
-            // btndelete
-            // 
-            this.btndelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btndelete.Location = new System.Drawing.Point(298, 251);
-            this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(82, 36);
-            this.btndelete.TabIndex = 9;
-            this.btndelete.Text = "DELETE";
-            this.btndelete.UseVisualStyleBackColor = true;
-            // 
             // linkLabel1
             // 
             this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -200,8 +178,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.btndelete);
-            this.Controls.Add(this.btnedit);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Name = "assingrple";
@@ -227,8 +203,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnedit;
-        private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;

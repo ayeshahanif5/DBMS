@@ -112,5 +112,22 @@ namespace fyp
             ex.Show();
             this.Hide();
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8)
+            {
+
+
+                e.Handled = false;
+
+            }
+            else
+            {
+                MessageBox.Show("Please Enter only Number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                e.Handled = true;
+
+            }
+        }
     }
 }
