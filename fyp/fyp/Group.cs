@@ -89,8 +89,16 @@ namespace fyp
 
             for (int i = 0; i < dataGridView2.Rows.Count - 1; i++)
             {
+                string q1 = "(select Id from[Group] where Created_On = '" + Convert.ToDateTime(dateTimePicker1.Text).ToString() + "')";
+                SqlCommand cm = new SqlCommand(q1, con);
+                int s = Convert.ToInt32(cm.ExecuteScalar());
 
-                SqlCommand cmd = new SqlCommand("insert into GroupStudent(GroupId,StudentId,Status,AssignmentDate) Values((select Id from [Group] where Created_On='" + Convert.ToDateTime(dateTimePicker1.Text).ToString() + "'), (select Id from Student where RegistrationNo='" + dataGridView2.Rows[i].Cells[0].Value.ToString() + "'), (Select Id from Lookup where Value='" + comboBox1.Text + "'),'" + Convert.ToDateTime(dateTimePicker2.Text).ToString() + "')", con);
+                string q = "(select Id from Student where RegistrationNo='" + dataGridView2.Rows[i].Cells[0].Value + "')";
+                SqlCommand c = new SqlCommand(q, con);
+                int s1 = Convert.ToInt32(c.ExecuteScalar());
+
+
+                SqlCommand cmd = new SqlCommand("insert into GroupStudent(GroupId,StudentId,Status,AssignmentDate) Values('"+s+"', '"+s1+"', (Select Id from Lookup where Value='" + comboBox1.Text + "'),'" + Convert.ToDateTime(dateTimePicker2.Text).ToString() + "')", con);
 
 
                 cmd.ExecuteNonQuery();
@@ -99,7 +107,7 @@ namespace fyp
         }
             catch (Exception ex)
             {
-                MessageBox.Show("sorry");
+                MessageBox.Show("already exist");
             }
     con.Close();
                 dataGridView2.Rows.Clear();
